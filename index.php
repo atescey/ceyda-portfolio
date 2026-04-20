@@ -31,7 +31,6 @@
 
             </div>
             <div class="skills">
-                <!-- My Pink Stack 🌸 -->
                 <span class="skill-tag">JavaScript</span>
                 <span class="skill-tag">HTML5 & CSS3</span>
                 <span class="skill-tag">Python</span>
@@ -51,7 +50,6 @@
         <h2 class="section-title">Açık Kaynak Projelerim</h2>
         <div class="project-grid">
             <?php
-            // GitHub'dan çekilen (özel istenilenler dahil) tüm aktif projeler
             $projects = [
                 ['name' => 'Cey-Core-Studio-Web', 'url' => 'https://github.com/atescey/Cey-Core-Studio-Web', 'desc' => 'Cey Core Studio için tasarlanmış web projesi arayüzü.', 'lang' => 'HTML', 'gradient' => 'linear-gradient(45deg, #f472b6, #ec4899)'],
                 ['name' => 'afet-yardim-sistemi', 'url' => 'https://github.com/atescey/afet-yardim-sistemi', 'desc' => 'JavaScript kullanılarak geliştirilmiş afet yardım platformu.', 'lang' => 'JavaScript', 'gradient' => 'linear-gradient(45deg, #8b5cf6, #3b82f6)'],
@@ -71,10 +69,8 @@
             foreach ($projects as $p) {
                 $langClass = strtolower($p['lang']);
 
-                // Web projeleri için canlı sayfa (Live Page) ekran görüntüsünü çeker
-                // Diğerleri (Python, Java, C vb.) için GitHub OpenGraph görsellerini kullanır.
                 if (in_array($p['lang'], ['HTML', 'CSS', 'JavaScript'])) {
-                    // Sayfanın gerçek canlı ekran görüntüsünü getiren güvenilir bir servis
+                 
                     $imageUrl = 'https://image.thum.io/get/width/800/crop/800/https://atescey.github.io/' . $p['name'] . '/';
                 } else {
                     $imageUrl = 'https://opengraph.githubassets.com/1/atescey/' . $p['name'];
@@ -100,8 +96,6 @@
 <section id="iletisim" class="contact-section">
     <div class="container glass-panel">
         <h2 class="section-title">İletişim</h2>
-
-        <!-- Formspree Entegrasyonu (KENDI_ID_NUMARANI_YAZ kısmını değiştirmelisin) -->
         <form action="https://formspree.io/f/mgorzjvo" method="POST" class="contact-form">
             <div class="form-group">
                 <label for="name">Adınız</label>
