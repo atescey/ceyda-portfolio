@@ -1,15 +1,22 @@
 <?php include 'includes/header.php'; ?>
 
 <section id="hero" class="hero-section">
+    
     <div class="container glass-panel">
+        
         <img src="https://github.com/atescey.png" alt="Ceyda Ateşoğlu" class="profile-photo">
+        
         <h1 class="hero-title">Merhaba, Ben <span class="gradient-text">Ceyda Ateşoğlu</span></h1>
+        
         <p class="hero-subtitle">Bilgisayar Mühendisliği Öğrencisi </p>
+        
         <div class="hero-actions">
             <a href="#projeler" class="btn btn-primary">Projelerimi Gör</a>
             <a href="#iletisim" class="btn btn-secondary">Benimle İletişime Geç</a>
         </div>
+        
     </div>
+    
 </section>
 
 <section id="hakkimda" class="about-section">
@@ -17,6 +24,7 @@
         <h2 class="section-title">Hakkımda</h2>
         <div class="about-content">
             <div class="about-text">
+                
                 <p>Merhaba, ben Ceyda.
 
                     Bilgisayar Mühendisliği 2. sınıf öğrencisiyim.
@@ -30,6 +38,7 @@
                 </p>
 
             </div>
+            
             <div class="skills">
                 <span class="skill-tag">JavaScript</span>
                 <span class="skill-tag">HTML5 & CSS3</span>
@@ -45,9 +54,12 @@
     </div>
 </section>
 
+
 <section id="projeler" class="projects-section">
     <div class="container">
+        
         <h2 class="section-title">Açık Kaynak Projelerim</h2>
+        
         <div class="project-grid">
             <?php
             $projects = [
@@ -67,17 +79,21 @@
             ];
 
             foreach ($projects as $p) {
+                
                 $langClass = strtolower($p['lang']);
 
                 if (in_array($p['lang'], ['HTML', 'CSS', 'JavaScript'])) {
                  
                     $imageUrl = 'https://image.thum.io/get/width/800/crop/800/https://atescey.github.io/' . $p['name'] . '/';
                 } else {
+                    
                     $imageUrl = 'https://opengraph.githubassets.com/1/atescey/' . $p['name'];
                 }
 
                 echo '<a href="' . $p['url'] . '" target="_blank" class="project-card">';
+                
                 $imageUrl = 'https://opengraph.githubassets.com/1/atescey/' . $p['name'];
+                
                 echo '    <div class="project-image" style="background-image: url(\'' . $imageUrl . '\'); background-size: cover; background-position: center;"></div>';
                 echo '    <div class="project-info">';
                 echo '        <h3>' . $p['name'] . '</h3>';
@@ -90,12 +106,17 @@
             }
             ?>
         </div>
+        
     </div>
+    
 </section>
 
 <section id="iletisim" class="contact-section">
+    
     <div class="container glass-panel">
+        
         <h2 class="section-title">İletişim</h2>
+        
         <form action="https://formspree.io/f/mgorzjvo" method="POST" class="contact-form">
             <div class="form-group">
                 <label for="name">Adınız</label>
@@ -110,6 +131,8 @@
                 <textarea id="message" name="message" rows="5" required
                     placeholder="Merhaba, projenizle ilgili..."></textarea>
             </div>
+
+            
             <button type="submit" class="btn btn-primary btn-block">Gönder</button>
         </form>
     </div>
